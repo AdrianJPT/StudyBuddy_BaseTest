@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 0,
+    "suites": 4,
+    "tests": 5,
+    "passes": 4,
     "pending": 0,
     "failures": 1,
-    "start": "2024-10-07T08:29:13.484Z",
-    "end": "2024-10-07T08:29:34.215Z",
-    "duration": 20731,
-    "testsRegistered": 1,
-    "passPercent": 0,
+    "start": "2024-10-07T08:42:14.466Z",
+    "end": "2024-10-07T08:43:33.742Z",
+    "duration": 79276,
+    "testsRegistered": 5,
+    "passPercent": 80,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,16 +18,189 @@
   },
   "results": [
     {
-      "uuid": "4a45fac8-0a2f-40f4-833a-c24b0297d400",
+      "uuid": "94cec1f9-6fcf-43dc-a366-aa469d9de9f6",
       "title": "",
-      "fullFile": "/home/adrian/job/projects/StudyBuddy/test/passwordResetTest.js",
-      "file": "/test/passwordResetTest.js",
+      "fullFile": "",
+      "file": "",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "dc4b55f7-327b-4316-bae0-5541af10731c",
+          "uuid": "3ed536dc-b011-4ce1-9054-87005148c5f7",
+          "title": "Validate user access",
+          "fullFile": "/home/adrian/job/projects/StudyBuddy/test/extensionUserAccessTest.js",
+          "file": "/test/extensionUserAccessTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Validate user access\"",
+              "fullTitle": "Validate user access \"before all\" hook in \"Validate user access\"",
+              "timedOut": false,
+              "duration": 4356,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let options = new chrome.Options();\noptions.addExtensions(extensionPath);\n// Launch the browser\ndriver = await new Builder()\n    .forBrowser('chrome')\n    .setChromeOptions(options)\n    .build();",
+              "err": {},
+              "uuid": "d40c2fd9-2c0a-41cc-a979-8bc3a84df048",
+              "parentUUID": "3ed536dc-b011-4ce1-9054-87005148c5f7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Validate user access\"",
+              "fullTitle": "Validate user access \"after all\" hook in \"Validate user access\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Close the browser\nif (driver) {\n    //await driver.quit();\n}",
+              "err": {},
+              "uuid": "be5ba562-9f33-4067-9dde-dcfb77a2ca04",
+              "parentUUID": "3ed536dc-b011-4ce1-9054-87005148c5f7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "have to log in to access all paid features",
+              "fullTitle": "Validate user access have to log in to access all paid features",
+              "timedOut": false,
+              "duration": 5582,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// navigate to the url    \n            driver.get('chrome-extension://ehaanimekcjndnhnkojcckjcgalkfgee/popup.html');\n            //Onbording Next button\n            let onboardingPage = new OnbordingPage(driver);\n            await onboardingPage.ClickAcceptOnbording();    \n            await onboardingPage.ClickButtonNoThanksTurbo();\n            // Validate\n            await onboardingPage.isShownTheLoginButton();",
+              "err": {},
+              "uuid": "b4543240-d82c-43c4-9341-1ee7a3e5158f",
+              "parentUUID": "3ed536dc-b011-4ce1-9054-87005148c5f7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b4543240-d82c-43c4-9341-1ee7a3e5158f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5582,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        },
+        {
+          "uuid": "b489ef6a-9fab-4068-ad7f-0aee8e700d7c",
+          "title": "Login Feature",
+          "fullFile": "/home/adrian/job/projects/StudyBuddy/test/loginTest.js",
+          "file": "/test/loginTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Login Feature\"",
+              "fullTitle": "Login Feature \"before all\" hook in \"Login Feature\"",
+              "timedOut": false,
+              "duration": 2441,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Launch the browser\ndriver = await new Builder().forBrowser('chrome').build();",
+              "err": {},
+              "uuid": "3f108bab-f418-45f9-8a4c-d3e6d61ce472",
+              "parentUUID": "b489ef6a-9fab-4068-ad7f-0aee8e700d7c",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Login Feature\"",
+              "fullTitle": "Login Feature \"after all\" hook in \"Login Feature\"",
+              "timedOut": false,
+              "duration": 243,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Close the browser\nif (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "c5e87541-ec59-4add-9049-e002aeef1ef0",
+              "parentUUID": "b489ef6a-9fab-4068-ad7f-0aee8e700d7c",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should validate the fields for the login are valid",
+              "fullTitle": "Login Feature should validate the fields for the login are valid",
+              "timedOut": false,
+              "duration": 16845,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Create an instance of the LoginPage\nconst loginPage = new LoginPage(driver);\n// Navigate to the login page\nawait loginPage.open();\n// Validate email field\nawait loginPage.validateEmailField();\n// Validate password field\nawait loginPage.validatePasswordField();",
+              "err": {},
+              "uuid": "11053df9-a7f1-41aa-9559-fd2f8db5c48d",
+              "parentUUID": "b489ef6a-9fab-4068-ad7f-0aee8e700d7c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should login successfully as a non-paid user and request payment",
+              "fullTitle": "Login Feature should login successfully as a non-paid user and request payment",
+              "timedOut": false,
+              "duration": 14365,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Create an instance of the LoginPage\nconst loginPage = new LoginPage(driver);\n// Navigate to the login page\nawait loginPage.open();\n// Perform login\nawait loginPage.login('testdatatemporal@gmail.com', 'Test123456$');\n// Validate login success\nawait loginPage.validatePaymentRequest();",
+              "err": {},
+              "uuid": "6b012ab1-99b5-4fa3-8a77-fb2280e483f7",
+              "parentUUID": "b489ef6a-9fab-4068-ad7f-0aee8e700d7c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "11053df9-a7f1-41aa-9559-fd2f8db5c48d",
+            "6b012ab1-99b5-4fa3-8a77-fb2280e483f7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31210,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        },
+        {
+          "uuid": "6f60c6c3-555f-4c79-b2cb-f87e70de5778",
           "title": "Password Reset Feature",
           "fullFile": "/home/adrian/job/projects/StudyBuddy/test/passwordResetTest.js",
           "file": "/test/passwordResetTest.js",
@@ -36,7 +209,7 @@
               "title": "\"before all\" hook in \"Password Reset Feature\"",
               "fullTitle": "Password Reset Feature \"before all\" hook in \"Password Reset Feature\"",
               "timedOut": false,
-              "duration": 1775,
+              "duration": 1761,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +218,8 @@
               "context": null,
               "code": "// Context\ndriver = await new Builder()\n    .forBrowser('chrome')\n    .build();",
               "err": {},
-              "uuid": "f5b026f9-e533-490f-b2fd-c50d69585c9c",
-              "parentUUID": "dc4b55f7-327b-4316-bae0-5541af10731c",
+              "uuid": "f8a58019-eadf-4eb9-805d-44480c9a9f88",
+              "parentUUID": "6f60c6c3-555f-4c79-b2cb-f87e70de5778",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +229,7 @@
               "title": "\"after all\" hook in \"Password Reset Feature\"",
               "fullTitle": "Password Reset Feature \"after all\" hook in \"Password Reset Feature\"",
               "timedOut": false,
-              "duration": 417,
+              "duration": 348,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +238,8 @@
               "context": null,
               "code": "// Close the browser\nif (driver) {\n    this.timeout(2000)\n    await driver.quit();\n}",
               "err": {},
-              "uuid": "448c0771-57e1-40ff-8181-e0861c4cac07",
-              "parentUUID": "dc4b55f7-327b-4316-bae0-5541af10731c",
+              "uuid": "6c971801-6fdc-45c9-8571-f7997288f10c",
+              "parentUUID": "6f60c6c3-555f-4c79-b2cb-f87e70de5778",
               "isHook": true,
               "skipped": false
             },
@@ -74,7 +247,7 @@
               "title": "\"after each\" hook in \"Password Reset Feature\"",
               "fullTitle": "Password Reset Feature \"after each\" hook in \"Password Reset Feature\"",
               "timedOut": false,
-              "duration": 2,
+              "duration": 1,
               "state": null,
               "speed": null,
               "pass": false,
@@ -83,8 +256,8 @@
               "context": null,
               "code": "await captureScreenshotOnFailure(driver, this);",
               "err": {},
-              "uuid": "377e0aa1-1223-4db3-8f43-116e05d74a76",
-              "parentUUID": "dc4b55f7-327b-4316-bae0-5541af10731c",
+              "uuid": "4e87857d-b08f-4b94-a433-c7b13edb74e4",
+              "parentUUID": "6f60c6c3-555f-4c79-b2cb-f87e70de5778",
               "isHook": true,
               "skipped": false
             }
@@ -94,7 +267,7 @@
               "title": "When user try to reset if password with a registed email, should be sent a password reset link to the user email",
               "fullTitle": "Password Reset Feature When user try to reset if password with a registed email, should be sent a password reset link to the user email",
               "timedOut": false,
-              "duration": 18509,
+              "duration": 16365,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -103,12 +276,12 @@
               "context": "[\n  \"Following comes the failed test image\",\n  \"screenshots/When user try to reset if password with a registed email, should be sent a password reset link to the user email.jpeg\"\n]",
               "code": "// context\ndriver.get('https://studybuddy.gg/login');\n// Act\nconst loginPage = new LoginPage(driver);\nawait loginPage.ClickForgotPassword();\nconst resetPasswordPage = new ResetPasswordPage(driver);\nawait resetPasswordPage.InputEmail('adrianpablotamayo@gmail.com');\nawait resetPasswordPage.ClickSendEmail();\n// Assert\nawait resetPasswordPage.CheckCodeGenerated();",
               "err": {
-                "message": "TimeoutError: Waiting for element to be located By(xpath, //span[text()='Code Generated'])\nWait timed out after 5219ms",
-                "estack": "TimeoutError: Waiting for element to be located By(xpath, //span[text()='Code Generated'])\nWait timed out after 5219ms\n    at /home/adrian/job/projects/StudyBuddy/node_modules/selenium-webdriver/lib/webdriver.js:923:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "message": "TimeoutError: Waiting for element to be located By(xpath, //span[text()='Code Generated'])\nWait timed out after 5017ms",
+                "estack": "TimeoutError: Waiting for element to be located By(xpath, //span[text()='Code Generated'])\nWait timed out after 5017ms\n    at /home/adrian/job/projects/StudyBuddy/node_modules/selenium-webdriver/lib/webdriver.js:923:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": null
               },
-              "uuid": "967a2179-6854-4539-871b-680c84c8828e",
-              "parentUUID": "dc4b55f7-327b-4316-bae0-5541af10731c",
+              "uuid": "dde95c91-e9f1-461a-840f-42e168488b29",
+              "parentUUID": "6f60c6c3-555f-4c79-b2cb-f87e70de5778",
               "isHook": false,
               "skipped": false
             }
@@ -116,11 +289,88 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "967a2179-6854-4539-871b-680c84c8828e"
+            "dde95c91-e9f1-461a-840f-42e168488b29"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 18509,
+          "duration": 16365,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        },
+        {
+          "uuid": "1fded092-34ff-4ad7-8cb9-e08c70a90e71",
+          "title": "Registration Feature",
+          "fullFile": "/home/adrian/job/projects/StudyBuddy/test/registrationTest.js",
+          "file": "/test/registrationTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Registration Feature\"",
+              "fullTitle": "Registration Feature \"before all\" hook in \"Registration Feature\"",
+              "timedOut": false,
+              "duration": 1761,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Launch the browser\ndriver = await new Builder().forBrowser('chrome').build();",
+              "err": {},
+              "uuid": "3bf63e7f-4154-4d01-97ec-159aa0982284",
+              "parentUUID": "1fded092-34ff-4ad7-8cb9-e08c70a90e71",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Registration Feature\"",
+              "fullTitle": "Registration Feature \"after all\" hook in \"Registration Feature\"",
+              "timedOut": false,
+              "duration": 59,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Close the browser\nif (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "588b7aeb-eb84-4d9a-9a62-8be16e59cee8",
+              "parentUUID": "1fded092-34ff-4ad7-8cb9-e08c70a90e71",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should not register with an already registered account",
+              "fullTitle": "Registration Feature should not register with an already registered account",
+              "timedOut": false,
+              "duration": 15088,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Create an instance of the RegistrationPage\nconst registrationPage = new RegistrationPage(driver);\n// Navigate to the registration page\nawait registrationPage.open();\n// Perform registration\nawait registrationPage.register('testdatatemporal@gmail.com', 'Test123456$');\n// Validate registration failure\nawait registrationPage.validateRegistrationFailure();",
+              "err": {},
+              "uuid": "d07c707b-583f-42b7-aec3-c410208ed0d5",
+              "parentUUID": "1fded092-34ff-4ad7-8cb9-e08c70a90e71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d07c707b-583f-42b7-aec3-c410208ed0d5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15088,
           "root": false,
           "rootEmpty": false,
           "_timeout": 30000

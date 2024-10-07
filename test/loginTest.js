@@ -3,7 +3,7 @@ import { should } from 'chai';
 should(); // Initialize should
 
 // Import pages
-import { LoginPage } from './pages/LoginPage.js';
+import { LoginPage } from '../pages/LoginPage.js';
 
 describe('Login Feature', function () {
     this.timeout(30000); // Set a higher timeout for Selenium 

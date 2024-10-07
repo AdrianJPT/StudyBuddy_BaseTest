@@ -3,7 +3,7 @@ import { should } from 'chai';
 should(); // Initialize should
 
 // Import pages
-import { RegistrationPage } from './pages/RegistrationPage.js';
+import { RegistrationPage } from '../pages/RegistrationPage.js';
 
 describe('Registration Feature', function () {
     this.timeout(30000); // Set a higher timeout for Selenium 

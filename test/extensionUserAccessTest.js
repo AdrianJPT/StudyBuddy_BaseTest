@@ -5,8 +5,7 @@ import { expect } from 'chai';
 expect();
 
 // import pages
-import { OnbordingPage} from './pages/OnbordingPage.js'
-import { MainExtentionPage} from './pages/MainExtentionPage.js'
+import { OnbordingPage} from '../pages/OnbordingPage.js'
 
 import path from 'path'
 import chrome from 'selenium-webdriver/chrome.js'
