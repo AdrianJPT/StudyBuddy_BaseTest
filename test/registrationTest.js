@@ -1,6 +1,4 @@
 import { Builder, By, until } from 'selenium-webdriver';
-import { should } from 'chai';
-should(); // Initialize should
 
 // Import pages
 import { RegistrationPage } from '../pages/RegistrationPage.js';

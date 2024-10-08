@@ -1,8 +1,5 @@
 import { Builder, By, Key, until} from 'selenium-webdriver';
-import { should } from 'chai';
-should(); // Initialize should
-import { expect } from 'chai';
-expect();
+
 
 // import pages
 import { OnbordingPage} from '../pages/OnbordingPage.js'

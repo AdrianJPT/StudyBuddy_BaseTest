@@ -1,8 +1,4 @@
 import { Builder, until} from 'selenium-webdriver';
-import { should } from 'chai';
-should(); // Initialize should
-import { expect } from 'chai';
-expect();
 import { captureScreenshotOnFailure } from '../utils/screenshot.js';
 
 // import pages
@@ -31,9 +27,9 @@ describe('Password Reset Feature', function () {
 
     afterEach(async function() {
         await captureScreenshotOnFailure(driver, this);
-    });
+    }); 
 
-    it( 'When user try to reset if password with a registed email, should be sent a password reset link to the user email', async function(){
+    it( 'When user try to reset if password with a registed email, should be sent a reset code to the user email', async function(){
             // context
             driver.get('https://studybuddy.gg/login');
 
