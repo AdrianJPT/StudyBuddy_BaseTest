@@ -7,6 +7,18 @@ This project is designed to perform automated testing of web applications using 
 - Mocha Reporter
 - Chai
 
+## Test Scenarios
+
+| Feature   | Scenario                                                                  |
+|-----------|---------------------------------------------------------------------------|
+| **Login** | should validate the fields for the login are valid                                  |
+| **Login** | should login successfully as a non-paid user and request payment                                                 |
+| **Login** | should login successfully as a paid user                                                |
+| **Registration** | should not register with an already registered account |
+| **Password Reset** | When user try to reset if password with a registed email, should be sent a reset code to the user email     |
+| **Extension** | should have to log in to access all paid features     |
+
+
 ## Requirements
 
 - Node.js
