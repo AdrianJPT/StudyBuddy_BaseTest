@@ -26,7 +26,7 @@ describe('Validate user access', function () {
     after(async function() {
         // Close the browser
         if (driver) {
-            //await driver.quit();
+            await driver.quit();
         }
     });
 

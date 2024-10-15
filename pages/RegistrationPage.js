@@ -1,4 +1,6 @@
 import { By, until } from 'selenium-webdriver';
+import { should } from 'chai';
+should(); // Initialize should
 
 class RegistrationPage {
     constructor(driver) {
